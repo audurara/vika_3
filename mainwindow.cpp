@@ -14,6 +14,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->comboBox_2->addItem("ASC");
     ui->comboBox_2->addItem("DESC");
 
+    ui->comboBox_filte_Computers->addItem("name");
+    ui->comboBox_filte_Computers->addItem("buildy");
+    ui->comboBox_filte_Computers->addItem("type");
+    ui->comboBox_filte_Computers->addItem("constr");
+    ui->comboBox_3->addItem("ASC");
+    ui->comboBox_3->addItem("DESC");
+
     _service.openFiles();
     displayStudents();
     displayComputers();
@@ -52,7 +59,10 @@ void MainWindow::displayStudents()
 
 void MainWindow::displayComputers()
 {
-    vector<computers> pf = _data.displayComputers();
+    string input = ui->comboBox_filte_Computers->currentText().toStdString();
+    string input2 = ui->comboBox_3->currentText().toStdString();
+    string input3 = ui->line_input_Computer_name->text().toStdString();
+    vector<computers> pf = _service.sortComputers(input, input2, input3);
     ui->table_computers->clearContents();
     ui->table_computers->setRowCount(pf.size());
     for(unsigned int row = 0; row < pf.size(); row++)
@@ -86,4 +96,19 @@ void MainWindow::on_comboBox_2_activated(const QString &arg1)
 void MainWindow::on_input_scientist_search_textChanged(const QString &arg1)
 {
     displayStudents();
+}
+
+void MainWindow::on_line_input_Computer_name_textChanged(const QString &arg1)
+{
+    displayComputers();
+}
+
+void MainWindow::on_comboBox_filte_Computers_activated(const QString &arg1)
+{
+    displayComputers();
+}
+
+void MainWindow::on_comboBox_3_activated(const QString &arg1)
+{
+    displayComputers();
 }

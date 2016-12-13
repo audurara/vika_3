@@ -24,7 +24,7 @@ public:
     DataAccess();
     vector<Performer> searchScientist(QString name);
     vector<computers> searchComputer(QString name);
-    vector<computers> sortCpu(string input, string input2);
+    vector<computers> sortCpu(string input, string input2, string input3);
     vector<Performer> sortScientists(string input, string input2, string input3);
     vector<RelationsTable> readCpuData();
     vector<RelationsTable> readData();//Les upplýsingar úr skrá og setur í vektor

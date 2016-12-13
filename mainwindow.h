@@ -28,6 +28,12 @@ private slots:
 
     void on_input_scientist_search_textChanged(const QString &arg1);
 
+    void on_line_input_Computer_name_textChanged(const QString &arg1);
+
+    void on_comboBox_filte_Computers_activated(const QString &arg1);
+
+    void on_comboBox_3_activated(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     PerformerService _service;

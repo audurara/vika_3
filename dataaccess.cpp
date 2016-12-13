@@ -111,10 +111,10 @@ void DataAccess::addRelations(int sId, int cId)
         query.exec();
 }
 
-vector<computers> DataAccess::sortCpu(string input, string input2)
+vector<computers> DataAccess::sortCpu(string input, string input2, string input3)
 {
     vector<computers> sort;
-    string str = "SELECT * FROM \"Computers\" ORDER BY " + input + " " + input2;
+    string str = "SELECT * FROM Computers WHERE name LIKE \"%" + input3 + "%\" ORDER BY " + input + " " + input2;
     QString qstr = QString::fromStdString(str);
     QSqlQuery query;
     query.exec(qstr);

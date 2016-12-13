@@ -75,9 +75,9 @@ void PerformerService::addRelations(int sId, int cId)
     _data.addRelations(sId, cId);
 }
 
-vector<computers> PerformerService::sortComputers(string i1, string i2)
+vector<computers> PerformerService::sortComputers(string i1, string i2, string i3)
 {
-    vector<computers> pf = _data.sortCpu(i1, i2);
+    vector<computers> pf = _data.sortCpu(i1, i2, i3);
     return pf;
 }
 

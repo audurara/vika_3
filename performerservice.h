@@ -26,7 +26,7 @@ public:
     void addRelations(int sId, int cId);
     void removeJoin(int id);
     vector<RelationsTable2> viewScientist(int counter);
-    vector<computers> sortComputers(string i1, string i2);
+    vector<computers> sortComputers(string i1, string i2, string i3);
     vector<Performer> sortScientists(string i1, string i2, string i3);
     vector<RelationsID> viewJoin();
     vector<RelationsTable> readData();
