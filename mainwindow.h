@@ -20,6 +20,7 @@ public:
 
 private slots:
     void displayStudents();
+    void displayComputers();
 
     void on_combobox_filter_students_activated();
 

@@ -134,6 +134,28 @@ vector<computers> DataAccess::sortCpu(string input, string input2)
     return sort;
 }
 
+ vector<computers> DataAccess::displayComputers() {
+
+     vector<computers> display;
+     string str = "SELECT * FROM Computers";
+     QString qstr = QString::fromStdString(str);
+     QSqlQuery query;
+     query.exec(qstr);
+     while (query.next())
+     {
+         int id = query.value(0).toInt();
+         QString name = query.value(1).toString();
+         QString buildy = query.value(2).toString();
+         QString brand = query.value(3).toString();
+         QString constr = query.value(4).toString();
+
+         computers P(id, name, buildy, brand, constr);
+         display.push_back(P);
+     }
+
+     return display;
+ }
+
 vector<Relations> DataAccess::joinScientists(string CS, int id)
 {
     vector<Relations> join;
