@@ -31,6 +31,7 @@ public:
     vector<RelationsTable2> viewScientist();
     vector<RelationsTable2> viewComputer();
     vector<Performer> displayScientists();
+    vector<computers> displayComputers();
     friend bool operator ==(const Performer& p1, const Performer& p2);
 };
 

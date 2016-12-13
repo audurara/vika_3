@@ -20,6 +20,7 @@ public:
 
 private slots:
     void displayStudents();
+    void displayComputers();
 
 private:
     Ui::MainWindow *ui;
