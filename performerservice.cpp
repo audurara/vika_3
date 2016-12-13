@@ -81,9 +81,9 @@ vector<computers> PerformerService::sortComputers(string i1, string i2)
     return pf;
 }
 
-vector<Performer> PerformerService::sortScientists(string i1, string i2)
+vector<Performer> PerformerService::sortScientists(string i1, string i2, string i3)
 {
-    vector<Performer> pf = _data.sortScientists(i1, i2);
+    vector<Performer> pf = _data.sortScientists(i1, i2, i3);
     return pf;
 }
 vector<RelationsID> PerformerService::viewJoin()

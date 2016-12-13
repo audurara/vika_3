@@ -21,6 +21,12 @@ public:
 private slots:
     void displayStudents();
 
+    void on_combobox_filter_students_activated();
+
+    void on_comboBox_2_activated(const QString &arg1);
+
+    void on_input_scientist_search_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     PerformerService _service;

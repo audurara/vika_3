@@ -199,10 +199,10 @@ vector<computers> DataAccess::searchComputer(QString name)
     return newVector;
 }
 
-vector<Performer> DataAccess::sortScientists(string input, string input2)
+vector<Performer> DataAccess::sortScientists(string input, string input2, string input3)
 {
     vector<Performer> sort;
-    string str = "SELECT * FROM \"Scientists\" ORDER BY " + input + " " + input2;
+    string str = "SELECT * FROM Scientists WHERE name LIKE \"%" + input3 + "%\" ORDER BY " + input + " " + input2;
     QString qstr = QString::fromStdString(str);
     QSqlQuery query;
     query.exec(qstr);

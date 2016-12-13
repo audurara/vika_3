@@ -6,6 +6,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->combobox_filter_students->addItem("name");
+    ui->combobox_filter_students->addItem("gender");
+    ui->combobox_filter_students->addItem("bYear");
+    ui->combobox_filter_students->addItem("dYear");
+    ui->combobox_filter_students->addItem("nation");
+    ui->comboBox_2->addItem("ASC");
+    ui->comboBox_2->addItem("DESC");
+
     _service.openFiles();
     displayStudents();
 }
@@ -17,7 +25,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::displayStudents()
 {
-    vector<Performer> pf = _data.displayScientists();
+    string input = ui->combobox_filter_students->currentText().toStdString();
+    string input2 = ui->comboBox_2->currentText().toStdString();
+    string input3 = ui->input_scientist_search->text().toStdString();
+    vector<Performer> pf = _data.sortScientists(input, input2, input3);
     ui->table_Students->clearContents();
     ui->table_Students->setRowCount(pf.size());
     for(unsigned int row = 0; row < pf.size(); row++)
@@ -39,3 +50,17 @@ void MainWindow::displayStudents()
 }
 
 
+void MainWindow::on_combobox_filter_students_activated()
+{
+    displayStudents();
+}
+
+void MainWindow::on_comboBox_2_activated(const QString &arg1)
+{
+    displayStudents();
+}
+
+void MainWindow::on_input_scientist_search_textChanged(const QString &arg1)
+{
+    displayStudents();
+}
