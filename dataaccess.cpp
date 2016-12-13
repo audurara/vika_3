@@ -286,3 +286,26 @@ vector<RelationsTable2> DataAccess::viewComputer()
 
     return logs;
 }
+vector<Performer> DataAccess::displayScientists()
+{
+    vector<Performer> newVector;
+
+    QString qstr = "SELECT * FROM Scientists";
+    QSqlQuery query;
+    query.exec(qstr);
+    while (query.next())
+    {
+        int id = query.value(0).toInt();
+        QString name = query.value(1).toString();
+        QString gender = query.value(2).toString();
+        QString bYear = query.value(3).toString();
+        QString dYear = query.value(4).toString();
+        QString nation = query.value(5).toString();
+
+        Performer P(id, name, gender, bYear, dYear, nation);
+        newVector.push_back(P);
+    }
+
+    return newVector;
+}
+

@@ -23,7 +23,30 @@
      </widget>
     </item>
     <item>
-     <widget class="QTableWidget" name="table_Students"/>
+     <widget class="QTableWidget" name="table_Students">
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>gender</string>
+       </property>
+      </column>
+     </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_test">

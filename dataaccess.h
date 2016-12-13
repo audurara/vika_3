@@ -30,6 +30,7 @@ public:
     vector<RelationsTable> readData();//Les upplýsingar úr skrá og setur í vektor
     vector<RelationsTable2> viewScientist();
     vector<RelationsTable2> viewComputer();
+    vector<Performer> displayScientists();
     friend bool operator ==(const Performer& p1, const Performer& p2);
 };
 
