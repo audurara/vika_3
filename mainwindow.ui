@@ -16,49 +16,69 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="button_fin_students">
-      <property name="text">
-       <string>find</string>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
       </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTableWidget" name="table_Students">
-      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderStretchLastSection">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderShowSortIndicator" stdset="0">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderStretchLastSection">
-       <bool>false</bool>
-      </attribute>
-      <column>
-       <property name="text">
-        <string>Name</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>gender</string>
-       </property>
-      </column>
+      <widget class="QWidget" name="Scientists">
+       <attribute name="title">
+        <string>Scientists</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTableWidget" name="table_Students">
+          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Gender</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Birth year</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Death year</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nationality</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Computers</string>
+       </attribute>
+      </widget>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_test">
       <property name="text">
        <string/>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="button_Push">
-      <property name="text">
-       <string>start connection</string>
       </property>
      </widget>
     </item>
@@ -70,7 +90,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>17</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

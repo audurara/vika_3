@@ -6,16 +6,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    _service.openFiles();
+    displayStudents();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-void MainWindow::on_button_Push_clicked()
-{
-    ui->label_test->setText("Connection established");
-    _service.openFiles();
 }
 
 void MainWindow::displayStudents()
@@ -29,13 +26,16 @@ void MainWindow::displayStudents()
 
         QString name = currentScientist.getName();
         QString gender = currentScientist.getGender();
+        QString byear = currentScientist.getbYear();
+        QString dyear = currentScientist.getdYear();
+        QString nationality = currentScientist.getNation();
 
         ui->table_Students->setItem(row, 0, new QTableWidgetItem(name));
         ui->table_Students->setItem(row, 1, new QTableWidgetItem(gender));
+        ui->table_Students->setItem(row, 2, new QTableWidgetItem(byear));
+        ui->table_Students->setItem(row, 3, new QTableWidgetItem(dyear));
+        ui->table_Students->setItem(row, 4, new QTableWidgetItem(nationality));
     }
 }
 
-void MainWindow::on_button_fin_students_clicked()
-{
-    displayStudents();
-}
+
