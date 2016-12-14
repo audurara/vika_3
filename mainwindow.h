@@ -37,6 +37,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_table_Students_clicked(const QModelIndex &index);
+
 private:
     Ui::MainWindow *ui;
     PerformerService _service;

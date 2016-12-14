@@ -119,3 +119,8 @@ void MainWindow::on_pushButton_clicked()
 
     addScientistDialog.exec();
 }
+
+void MainWindow::on_table_Students_clicked(const QModelIndex &index)
+{
+    ui->button_delete_scientist->setEnabled(true);
+}

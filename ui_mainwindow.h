@@ -45,7 +45,7 @@ public:
     QTableWidget *table_Students;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *button_delete_scientist;
     QWidget *tab;
     QVBoxLayout *verticalLayout_3;
     QLineEdit *line_input_Computer_name;
@@ -65,7 +65,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(400, 300);
+        MainWindow->resize(635, 412);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout = new QVBoxLayout(centralWidget);
@@ -130,10 +130,11 @@ public:
 
         horizontalLayout_2->addWidget(pushButton);
 
-        pushButton_2 = new QPushButton(Scientists);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        button_delete_scientist = new QPushButton(Scientists);
+        button_delete_scientist->setObjectName(QStringLiteral("button_delete_scientist"));
+        button_delete_scientist->setEnabled(false);
 
-        horizontalLayout_2->addWidget(pushButton_2);
+        horizontalLayout_2->addWidget(button_delete_scientist);
 
 
         verticalLayout_2->addLayout(horizontalLayout_2);
@@ -210,7 +211,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 400, 17));
+        menuBar->setGeometry(QRect(0, 0, 635, 26));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -221,7 +222,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -242,7 +243,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem4 = table_Students->horizontalHeaderItem(4);
         ___qtablewidgetitem4->setText(QApplication::translate("MainWindow", "Nationality", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Add Scientist", 0));
-        pushButton_2->setText(QApplication::translate("MainWindow", "Remove Scientist", 0));
+        button_delete_scientist->setText(QApplication::translate("MainWindow", "Remove Scientist", 0));
         tabWidget->setTabText(tabWidget->indexOf(Scientists), QApplication::translate("MainWindow", "Scientists", 0));
         line_input_Computer_name->setPlaceholderText(QApplication::translate("MainWindow", "Search a Computer name ..", 0));
         QTableWidgetItem *___qtablewidgetitem5 = table_computers->horizontalHeaderItem(0);
