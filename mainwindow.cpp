@@ -55,6 +55,7 @@ void MainWindow::displayStudents()
         ui->table_Students->setItem(row, 3, new QTableWidgetItem(dyear));
         ui->table_Students->setItem(row, 4, new QTableWidgetItem(nationality));
     }
+    currentDisplayedScientists = pf;
 }
 
 void MainWindow::displayComputers()
@@ -123,4 +124,13 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_table_Students_clicked(const QModelIndex &index)
 {
     ui->button_delete_scientist->setEnabled(true);
+}
+
+void MainWindow::on_button_delete_scientist_clicked()
+{
+    int currentSelecetedScientistIndex = ui->table_Students->currentIndex().row();
+    Performer currentSelecetedScientist = currentDisplayedScientists[currentSelecetedScientistIndex];
+    string name = currentSelecetedScientist.getName().toStdString();
+    _service.removeScientist(name);
+    displayStudents();
 }

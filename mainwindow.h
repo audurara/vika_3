@@ -39,10 +39,13 @@ private slots:
 
     void on_table_Students_clicked(const QModelIndex &index);
 
+    void on_button_delete_scientist_clicked();
+
 private:
     Ui::MainWindow *ui;
     PerformerService _service;
     DataAccess _data;
+    vector<Performer> currentDisplayedScientists;
 
 };
 
