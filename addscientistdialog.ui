@@ -32,7 +32,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="Inpu_Scientist_Gender"/>
+    <widget class="QLineEdit" name="Input_Scientist_Gender"/>
    </item>
    <item>
     <widget class="QLabel" name="Label_Scientist_BirthYear">
@@ -62,7 +62,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit"/>
+    <widget class="QLineEdit" name="Input_Scientist_Nationality"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">

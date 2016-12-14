@@ -118,4 +118,6 @@ void MainWindow::on_pushButton_clicked()
     AddScientistDialog addScientistDialog;
 
     addScientistDialog.exec();
+    displayStudents();
+
 }
