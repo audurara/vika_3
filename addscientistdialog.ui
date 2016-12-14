@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddScientistDialog</class>
+ <widget class="QDialog" name="AddScientistDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QLabel" name="Label_Scientist_Name">
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="Input_Scientist_name"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="Label_Scientist_Gender">
+     <property name="text">
+      <string>Gender</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="Inpu_Scientist_Gender"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="Label_Scientist_BirthYear">
+     <property name="text">
+      <string>Birth Year</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="Input_Scientist_Birth"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="Label_Scientist_DeathYear">
+     <property name="text">
+      <string>Death year</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="Input_Scientist_Death"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="Label_Scientist_Nationality">
+     <property name="text">
+      <string>Nationality</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="Button_Add_Scientist">
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Button_Cansel_Add">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

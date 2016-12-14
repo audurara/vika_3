@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     performerservice.cpp \
     relations.cpp \
     relationsid.cpp \
-    relationstable.cpp
+    relationstable.cpp \
+    addscientistdialog.cpp
 
 HEADERS  += mainwindow.h \
     computers.h \
@@ -30,6 +31,8 @@ HEADERS  += mainwindow.h \
     performerservice.h \
     relations.h \
     relationsid.h \
-    relationstable.h
+    relationstable.h \
+    addscientistdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    addscientistdialog.ui

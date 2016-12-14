@@ -5,6 +5,7 @@
 #include "performerservice.h"
 #include "dataaccess.h"
 #include <QtSql>
+#include "addscientistdialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -33,6 +34,8 @@ private slots:
     void on_comboBox_filte_Computers_activated(const QString &arg1);
 
     void on_comboBox_3_activated(const QString &arg1);
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

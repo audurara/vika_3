@@ -112,3 +112,10 @@ void MainWindow::on_comboBox_3_activated(const QString &arg1)
 {
     displayComputers();
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    AddScientistDialog addScientistDialog;
+
+    addScientistDialog.exec();
+}
