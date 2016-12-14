@@ -6,20 +6,20 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->combobox_filter_students->addItem("name");
-    ui->combobox_filter_students->addItem("gender");
-    ui->combobox_filter_students->addItem("bYear");
-    ui->combobox_filter_students->addItem("dYear");
-    ui->combobox_filter_students->addItem("nation");
-    ui->comboBox_2->addItem("ASC");
-    ui->comboBox_2->addItem("DESC");
+    ui->combobox_filter_students->addItem("Name");
+    ui->combobox_filter_students->addItem("Gender");
+    ui->combobox_filter_students->addItem("Birth year");
+    ui->combobox_filter_students->addItem("Death year");
+    ui->combobox_filter_students->addItem("Nationality");
+    ui->comboBox_2->addItem("Ascending");
+    ui->comboBox_2->addItem("Descending");
 
-    ui->comboBox_filte_Computers->addItem("name");
-    ui->comboBox_filte_Computers->addItem("buildy");
-    ui->comboBox_filte_Computers->addItem("type");
-    ui->comboBox_filte_Computers->addItem("constr");
-    ui->comboBox_3->addItem("ASC");
-    ui->comboBox_3->addItem("DESC");
+    ui->comboBox_filte_Computers->addItem("Name");
+    ui->comboBox_filte_Computers->addItem("Build year");
+    ui->comboBox_filte_Computers->addItem("Type");
+    ui->comboBox_filte_Computers->addItem("Constr");
+    ui->comboBox_3->addItem("Ascending");
+    ui->comboBox_3->addItem("Descending");
 
     _service.openFiles();
     displayStudents();
