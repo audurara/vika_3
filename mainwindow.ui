@@ -93,7 +93,10 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="button_delete_scientist">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>Remove Scientist</string>
             </property>
@@ -189,7 +192,7 @@
      <x>0</x>
      <y>0</y>
      <width>635</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

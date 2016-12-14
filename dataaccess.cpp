@@ -75,7 +75,7 @@ void DataAccess::addCpu (string name, string buildy, string brand, string constr
 
 void DataAccess::removeDataScientist(string name) //Þetta fall tekur út tölvunarfræðing sem inniheldur ákveðið nafn
 {
-    string str =  "DELETE FROM \"Scientists\" WHERE ID = " + name;
+    string str =  "DELETE FROM \"Scientists\" WHERE name = \"" + name + "\"";
     QString qstr = QString::fromStdString(str);
     QSqlQuery query;
     query.exec(qstr);
