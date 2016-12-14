@@ -35,6 +35,8 @@
 .Trashes
 ehthumbs.db
 
+
+debug/*
 Database.sqlite
 Makefile
 Makefile.Debug
