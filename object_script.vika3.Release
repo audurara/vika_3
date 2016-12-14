@@ -1,0 +1,14 @@
+INPUT(
+./release\main.o
+./release\dataaccess.o
+./release\consoleui.o
+./release\performer.o
+./release\performerservice.o
+./release\relationstable.o
+./release\computers.o
+./release\relations.o
+./release\relationsid.o
+./release\performersproject.o
+./release\mainwindow.o
+./release\moc_mainwindow.o
+);

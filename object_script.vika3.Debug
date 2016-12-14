@@ -1,0 +1,14 @@
+INPUT(
+./debug\main.o
+./debug\dataaccess.o
+./debug\consoleui.o
+./debug\performer.o
+./debug\performerservice.o
+./debug\relationstable.o
+./debug\computers.o
+./debug\relations.o
+./debug\relationsid.o
+./debug\performersproject.o
+./debug\mainwindow.o
+./debug\moc_mainwindow.o
+);
