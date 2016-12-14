@@ -37,6 +37,7 @@ ehthumbs.db
 
 
 debug/*
+*.pro.user*
 Database.sqlite
 Makefile
 Makefile.Debug
